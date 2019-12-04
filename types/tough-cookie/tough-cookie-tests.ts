@@ -19,6 +19,9 @@ cookiejar.getCookies('http://example.com/otherpath', (err, cookies) => {
 cookiejar.getCookies('http://example.com/otherpath', {}, () => {});
 
 cookiejar.getCookies('http://example.com/otherpath', {
+    now: new Date(),
+    expire: false,
+    allPaths: true,
     sameSiteContext: 'strict',
 }, () => {});
 

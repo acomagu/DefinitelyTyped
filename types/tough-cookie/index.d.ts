@@ -206,9 +206,9 @@ export namespace CookieJar {
     interface GetCookiesOptions {
         http?: boolean;
         secure?: boolean;
-        date?: Date;
+        now?: Date;
         expire?: boolean;
-        allPoints?: boolean;
+        allPaths?: boolean;
         sameSiteContext?: 'none' | 'lax' | 'strict';
     }
 
