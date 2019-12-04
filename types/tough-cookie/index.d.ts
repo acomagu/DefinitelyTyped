@@ -81,6 +81,7 @@ export class Cookie {
     path: string | null;
     secure: boolean;
     httpOnly: boolean;
+    sameSite: string;
     extensions: string[] | null;
     creation: Date | null;
     creationIndex: number;
@@ -199,6 +200,7 @@ export namespace CookieJar {
         secure?: boolean;
         now?: Date;
         ignoreError?: boolean;
+        sameSiteContext?: 'none' | 'lax' | 'strict';
     }
 
     interface GetCookiesOptions {
@@ -207,6 +209,7 @@ export namespace CookieJar {
         date?: Date;
         expire?: boolean;
         allPoints?: boolean;
+        sameSiteContext?: 'none' | 'lax' | 'strict';
     }
 
     interface Serialized {
